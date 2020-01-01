@@ -1,0 +1,21 @@
+{
+  "name": "project-x",
+  "version": "1.0.0",
+  "description": "Cip 2.0's Bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Cip",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "fs": "0.0.2",
+    "moment": "^2.22.2",
+    "ms": "^2.1.1",
+    "npm": "^6.4.1",
+    "superagent": "^4.0.0",
+    "request": "^2.81.0",
+    "snekfetch": "^4.0.4"
+  }
+}
