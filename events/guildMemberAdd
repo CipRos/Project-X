@@ -1,0 +1,4 @@
+module.exports = (client, member) => {
+  const defaultChannel = client.channels.get("632302563819126795");
+  defaultChannel.send(`Welcome ${member.user} to this server.`).catch(console.error);
+}
