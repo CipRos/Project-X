@@ -1,4 +1,4 @@
-exports.run = (client, message, args) => {
+exports.run = async (client, message, args) => {
     const Discord = require("discord.js")
 
 if (message.author.id === "410495079439007755") {
@@ -14,10 +14,10 @@ if (message.author.id === "410495079439007755") {
 			.addField("📥 Input", `\`\`\`js\n${codein}\`\`\``)
 			.addField("📤 Output", `\`\`\`js\n${code}\n\`\`\``)
 			.addField("Type", typeof code);
-		let msg = message.channel.send(embed);
+		let msg = await message.channel.send(embed);
 
 		await msg.react("❌");
-		const reactions = msg.awaitReactions(
+		const reactions = await msg.awaitReactions(
 			(reaction, user) => reaction.emoji.name === "❌" && user.id === message.author.id,
 			{
 				max: 1,
