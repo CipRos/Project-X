@@ -6,6 +6,7 @@ let subchan = client.channels.get("660121646958379044")
 let att = message.attachments.first()
 
 try {
+message.delete()
 if(type == "map") {
 if(message.attachments.first()){//checks if an attachment is sent
 //        if(att.filename === `png`){//Download only png (customize this)    
