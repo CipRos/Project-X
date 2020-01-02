@@ -14,7 +14,7 @@ if (message.author.id === "410495079439007755") {
 			.addField("📥 Input", `\`\`\`js\n${codein}\`\`\``)
 			.addField("📤 Output", `\`\`\`js\n${code}\n\`\`\``)
 			.addField("Type", typeof code);
-		let msg = await message.channel.send(embed);
+		let msg = message.channel.send(embed);
 
 		await msg.react("❌");
 		const reactions = await msg.awaitReactions(
