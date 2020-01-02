@@ -11,7 +11,7 @@ if(type == "map") {
 if(message.attachments.first()){//checks if an attachment is sent
 //        if(att.filename === `png`){//Download only png (customize this)    
            subchan.send(att.filename)
-           subchan.send(`Map submitted by ${message.author.tag}`, { files: [`${att}`]});
+           subchan.send(`Map submitted by ${message.author.tag}`, { files: `${att}` });
      
  //   }
   }
