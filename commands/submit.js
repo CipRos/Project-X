@@ -6,26 +6,22 @@ let subchan = client.channels.get("660121646958379044")
 let att = message.attachments.first()
 
 try {
-message.delete()
+
+//message.delete()
+//Dont delete messages cuz it makes discord go no no
+
 if(type == "map") {
 if(message.attachments.first()){//checks if an attachment is sent
-//        if(att.filename === `png`){//Download only png (customize this)    
            subchan.send(`>>> **New Map Submitted!**\n\n${att.filename} submitted by ${message.author.tag}\n\nURL: ${att.url}`);
-           message.reply(`The map **${att.filename}** was succesfully submitted!`)
-     
- //   }
+           message.reply(`The map **${att.filename}** was succesfully submitted!`);
   }
 }
 
 
 if(type == "model"){
 if(message.attachments.first()){//checks if an attachment is sent
-//        if(att.filename === `png`){//Download only png (customize this)
-
           subchan.send(`>>> **New Skin Submitted!**\n\n${att.filename} submitted by ${message.author.tag}\n\nURL: ${att.url}`);
           message.reply(`The skin **${att.filename}** was succesfully submitted!`)
-     
-//      }
     }
   }
 } catch(error) {
