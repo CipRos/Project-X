@@ -5,13 +5,13 @@ let type = args[0]
 let subchan = client.channels.get("660121646958379044")
 let att = message.attachments.first()
 
-subchan.send("Command Works")
 try {
 if(type == "map") {
 if(message.attachments.first()){//checks if an attachment is sent
 //        if(att.filename === `png`){//Download only png (customize this)    
            subchan.send(att.filename)
            subchan.send(`Map submitted by ${message.author.tag}\n\nURL: ${att.url}`);
+           message.channel.send(`The map ${att.filename} was succesfully submitted!`)
      
  //   }
   }
