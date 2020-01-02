@@ -16,7 +16,7 @@ if (message.author.id === "410495079439007755") {
 			.addField("Type", typeof code);
 		let msg = message.channel.send(embed);
 
-		msg.react("❌");
+		await msg.react("❌");
 		const reactions = msg.awaitReactions(
 			(reaction, user) => reaction.emoji.name === "❌" && user.id === message.author.id,
 			{
@@ -33,7 +33,7 @@ if (message.author.id === "410495079439007755") {
 		}
 	
  } catch(e) {
-       message.channel.send(`\`\`\`js\n${e}\n\`\`\``);
+     //  message.channel.send(`\`\`\`js\n${e}\n\`\`\``);
     }
   } else {
 		message.channel.send("Do not even try...");
