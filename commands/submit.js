@@ -10,7 +10,6 @@ message.delete()
 if(type == "map") {
 if(message.attachments.first()){//checks if an attachment is sent
 //        if(att.filename === `png`){//Download only png (customize this)    
-           subchan.send(att.filename)
            subchan.send(`>>> **New Map Submitted!**\n\n${att.filename} submitted by ${message.author.tag}\n\nURL: ${att.url}`);
            message.reply(`The map **${att.filename}** was succesfully submitted!`)
      
@@ -21,8 +20,12 @@ if(message.attachments.first()){//checks if an attachment is sent
 
 if(type == "model"){
 if(message.attachments.first()){//checks if an attachment is sent
-        if(att.filename === `png`){//Download only png (customize this)
-      }
+//        if(att.filename === `png`){//Download only png (customize this)
+
+          subchan.send(`>>> **New Skin Submitted!**\n\n${att.filename} submitted by ${message.author.tag}\n\nURL: ${att.url}`);
+          message.reply(`The skin **${att.filename}** was succesfully submitted!`)
+     
+//      }
     }
   }
 } catch(error) {
