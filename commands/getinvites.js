@@ -14,7 +14,7 @@ if(allowedToUse) {
     var invites = ["I am required else it won't work"], ct = 0;
     client.guilds.forEach(g => {
         g.fetchInvites().then(guildInvites => {
-            invites[invites.length + 1] = (g + " - Invites `" + guildInvites.array().join(", ") + "`");
+            invites[invites.length + 1] = (g + " - `Invites: " + guildInvites.array().join(", ") + "`");
             ct++;
 
             if(ct >= client.guilds.size) {
