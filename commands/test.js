@@ -1,10 +1,13 @@
 exports.run = (client, message, args) => {
+
 const Discord = require("discord.js")
-     (async () => {
-    const captureWebsite = require('capture-website');
-    await captureWebsite.file('https://spsknm.edupage.org/substitution/', 'suplovanie.png');
-})();
-    const suplovanie = new Attachment("./suplovanie.png");
+const webshot = require("webshot")
+try {
+ webshot("http://example.com", "scrn.png"
+    const att = new Attachment("./scrn.png");
     msg.channel.send(suplovanie);
+} catch(err) {
+ message.reply(`Error: ${err}`)
+}
 
 }
