@@ -1,0 +1,12 @@
+exports.run = (client, message, args) => {
+
+let timestorun = args[0]
+let messagetosay = args.slice("2").join(" ")
+
+const times = timestorun;
+if(times > 100) return message.channel.send("Max times to run is 100")
+for (let i = 0; i < times; i++) { 
+message.channel.send(messagetosay);
+}
+
+}
