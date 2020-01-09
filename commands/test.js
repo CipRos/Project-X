@@ -11,7 +11,7 @@ user: `${iuser.id}`}
 let log = audit.entries.first().changes
 let oldname = log.old
 let newname = log.new
-message.channel.send(`${newname}: ${oldname}`) 
+console.log(`${log} : ${newname} : ${oldname}`) 
 });
 
 } catch(err) {
