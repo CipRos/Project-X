@@ -1,11 +1,17 @@
 exports.run = (client, message, args) => {
 
-const Discord = require("discord.js")
-const webshot = require("webshot")
+let iuser = message.mentions.users.first() || client.users.get(args[0])
+
 try {
- webshot("http://example.com", "scrn.png")
-    const att = new Attachment("./scrn.png");
-    msg.channel.send(suplovanie);
+
+message.guild.fetchAuditLogs({
+type: 'MEMBER_UPDATE', 
+user: `${iuser}`}
+).then(async (audit) => { 
+let log = audit.entries.first().changes 
+message.channel.send(log) 
+});
+
 } catch(err) {
  message.reply(`Error: ${err}`)
 }
