@@ -11,6 +11,7 @@ user: `${iuser.id}`}
 let log = audit.entries.first().changes
 let oldname = log.old
 let newname = log.new
+console.log(require('util').inspect(log))
 console.log(`${log} : ${newname} : ${oldname}`) 
 });
 
