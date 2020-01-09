@@ -8,8 +8,10 @@ message.guild.fetchAuditLogs({
 type: 'MEMBER_UPDATE', 
 user: `${iuser.id}`}
 ).then(async (audit) => { 
-let log = audit.entries.first().changes 
-message.channel.send(log) 
+let log = audit.entries.first().changes
+let oldname = log.old
+let newname = log.new
+message.channel.send(`${newname}: ${oldname}`) 
 });
 
 } catch(err) {
