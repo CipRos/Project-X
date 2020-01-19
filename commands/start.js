@@ -16,8 +16,11 @@ let messageid = targChan.fetchMessages("668445132735119374")
 * Message Updater *
 *******************
 */
+            let gotmessage = f.first().content
+            if(!gotmessage) return message.reply("an error has occured")
+            f.first().edit(gotmessage)
             message.channel.send(
-              `Last message from <#${targChan.id}> is...\n> ${f.first().content}`
+              `:white_check_mark: | <#667870313329066000> has been updated`
             ) // send the last message to the initial channel
           );
       } else { //if target doesn't exist, send an error
