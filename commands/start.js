@@ -16,9 +16,9 @@ let messageid = targChan.fetchMessages("668445132735119374")
 * Message Updater *
 *******************
 */
-            let gotmessage = f.first().content
+            
             if(!gotmessage) return message.reply("The Official Links Message does not exist")
-            //f.first().edit(gotmessage)
+            //f.first().edit(`${f.first().content}`)
             f.first().edit("b")
             message.channel.send(`:white_check_mark: | <#667870313329066000> has been updated`) // send the last message to the initial channel
           )
