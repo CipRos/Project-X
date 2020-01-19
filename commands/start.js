@@ -1,7 +1,5 @@
 exports.run = (client, message, args) => {
 
-let iuser = message.mentions.users.first() || client.users.get(args[0])
-
 try {
 
 let targChan = message.guild.channels.find(c => c.id == "667870313329066000") || null // find the targeted channel
