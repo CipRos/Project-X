@@ -20,9 +20,7 @@ let messageid = targChan.fetchMessages("668445132735119374")
             if(!gotmessage) return message.reply("an error has occured")
             //f.first().edit(gotmessage)
             f.first().edit("b")
-            message.channel.send(
-              `:white_check_mark: | <#667870313329066000> has been updated`
-            ) // send the last message to the initial channel
+            message.channel.send(`:white_check_mark: | <#667870313329066000> has been updated`) // send the last message to the initial channel
           );
       } else { //if target doesn't exist, send an error
         message.channel.send("Target does not exist!");
