@@ -11,11 +11,7 @@ let messageid = targChan.fetchMessages("668445132735119374")
         targChan
           .fetchMessages({ limit: 1 })
           .then(f =>
-/*
-*******************
-* Message Updater *
-*******************
-*/
+
             
             //f.first().edit(`${f.first().content}`)
             )
