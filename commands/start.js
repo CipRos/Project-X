@@ -4,8 +4,8 @@ let iuser = message.mentions.users.first() || client.users.get(args[0])
 
 try {
 
-let targChan = message.guild.channels.find(c => c.id == "667870313329066000") || null; // find the targeted channel
-let messageid = targchan.fetchMessages("668445132735119374")
+let tarChan = message.guild.channels.find(c => c.id == "667870313329066000") || null; // find the targeted channel
+let messageid = targChan.fetchMessages("668445132735119374")
 
       if (targChan) { // make sure that the targeted channel exists, if it exists then fetch its last message
         targChan
