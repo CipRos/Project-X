@@ -17,7 +17,7 @@ let messageid = targChan.fetchMessages("668445132735119374")
 *******************
 */
             message.channel.send(
-              `Last message from <#${target.id}> is...\n> ${f.first().content}`
+              `Last message from <#${targChan.id}> is...\n> ${f.first().content}`
             ) // send the last message to the initial channel
           );
       } else { //if target doesn't exist, send an error
