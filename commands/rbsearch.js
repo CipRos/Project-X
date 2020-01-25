@@ -20,7 +20,7 @@ const roblox = require("noblox.js")
              .addField("Status", info.status || 'Nothing', true)
              .addField("Account Age", `${info.age} days old` || 'Unresolvable')
              .addField("User Link", `https://roblox.com/users/${id}/profile`)
-             .setFooter(`Project X`, bot.user.avatarURL)
+             .setFooter(`Project X`, client.user.avatarURL)
               message.channel.send({embed})
            })
          }
