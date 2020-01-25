@@ -7,8 +7,6 @@ const roblox = require("noblox.js")
        roblox.getIdFromUsername(username).then(id => { // gets user id for the specific part of the embed
          if (id) {
            roblox.getPlayerInfo(parseInt(id)).then(function(info) {
-             let date = new Date(info.joinDate) // states join date
-             let dateInfo = client.extractDate(date) 
              let embed = new discord.RichEmbed() // starts a new embed
 
              .setColor("#f9ae00") // sets the color of the embed
@@ -22,7 +20,7 @@ const roblox = require("noblox.js")
              .addField("Status", info.status || 'Nothing', true)
              .addField("Account Age", `${info.age} days old` || 'Unresolvable')
              .addField("User Link", `https://roblox.com/users/${id}/profile`)
-             .setFooter(`Search Bot`, bot.user.avatarURL)
+             .setFooter(`Project X`, bot.user.avatarURL)
               message.channel.send({embed})
            })
          }
