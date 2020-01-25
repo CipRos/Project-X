@@ -1,4 +1,4 @@
-module.exports.run = async (bot, message, args) => {
+exports.run = (client, message, args) => {
 const discord = require("discord.js")
 const roblox = require("noblox.js")
 
