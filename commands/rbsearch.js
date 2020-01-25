@@ -8,7 +8,7 @@ const roblox = require("noblox.js")
          if (id) {
            roblox.getPlayerInfo(parseInt(id)).then(function(info) {
              let date = new Date(info.joinDate) // states join date
-             let dateInfo = bot.extractDate(date) 
+             let dateInfo = client.extractDate(date) 
              let embed = new discord.RichEmbed() // starts a new embed
 
              .setColor("#f9ae00") // sets the color of the embed
